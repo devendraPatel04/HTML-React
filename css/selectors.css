@@ -1,0 +1,40 @@
+/* element selector */
+*{
+    background-color: rgb(141, 210, 30);
+}
+body{
+    color: royalblue;
+    height: 200vh;
+}
+
+div{
+    background-color: yellowgreen;
+}
+
+p{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-justify: ;
+}
+#first{
+    background-color: brown;
+}
+.redhate{
+    text-decoration: line-through;
+}
+[title]{
+    background-color: black;
+}
+[title~="flower"]{          /* id there is any word flower in it*/
+    text-align: center;
+    color: red;
+}
+h1,h2,p{
+    color: black;
+}
+a[target="_blank"]{
+    border: 5px solid red;
+    background-color: grey;
+}
+[title|="flower"]{          /* selector is used toselect elemts with the specified attribute starting with vaule */
+    background-color: crimson;
+}

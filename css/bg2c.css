@@ -1,0 +1,32 @@
+/* body{
+    height: 180vh;
+    background-image: url("./img/tree.jpg");
+    background-repeat:no-repeat;
+    background-position: bottom right;
+    background-position: center;
+    background-size: 50%;
+} */
+
+/* body{
+    height:150vh;
+    //background-image: linear-gradient(red,green,blue,orange);
+    background-image:radial-gradient(red,violet,green,yellow,blue);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 50%;
+} */
+
+/* properties for attachment */
+body{
+    height: 150vh;
+    background-image: url("./img/dog.jpg");
+    background-repeat: no-repeat;
+    /* background-position: 50% 25%; */
+    /* background-position: 10vh 15vh; */
+    background-position:initial;
+    background-attachment: fixed; /*by default scroll*/
+    /* background-size: cover; */
+    /* background-size: auto; */
+    /* background-size: initial; */
+    background-size: contain;
+}

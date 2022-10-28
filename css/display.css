@@ -1,0 +1,51 @@
+*{
+    color: brown;
+}
+
+h3#static{
+    position: static;
+    top: 80px;      /*it does matter because we r using static property here*/
+    background-color: blueviolet;
+    border: 3px solid black;
+    color: beige;
+}
+
+#relative{
+    color: rgb(69, 0, 87);
+    top: 10px;
+    position: relative;
+    margin-top: 10px;
+    margin-left: 8vh;
+    width: 70vh;
+    background-color: blue;
+}
+
+div.ab{
+    height: 400px;
+    border-top-style:dotted;
+    border-bottom-style:dashed;
+    border-left-style: groove;
+    border-right-style: double;
+    border-color: lawngreen;
+}
+div > a{
+    position: absolute;
+    /* background-color: greenyellow; */
+    top: 480px;
+    left: 200px;
+    bottom: 0px;
+    height: 20px;
+    border: 2px solid red;
+}
+#fixed{
+    color: darkgray;
+    position: fixed;
+    top: 500px;
+    right: 50px;
+}
+h3.sticky{
+    position: sticky;
+    top:20px;
+    background-color: black;
+    color: blue;
+}

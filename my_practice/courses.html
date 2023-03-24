@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <title>Add Courses Pages</title>
+</head>
+<body>
+    <head>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">Navbar</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Features</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Pricing</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link disabled">Disabled</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+    </head>
+
+    <main>
+        <div class="container mt-5 col-6">
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Enter Chapter Name" aria-label="Recipient's username" aria-describedby="button-addon2">
+
+                <button id="add_btn" class="btn btn-outline-success" type="button" id="button-addon2">Add</button>
+            </div>
+
+            <ul id="parentList" class="list-group">
+                <li class="list-group-item d-flex justify-content-between">
+                    <h3 class="flex-grow-1">Chpater 1</h3>           
+                    <button class="btn btn-warning mx-3" onclick = "editChapter(this)">Edit</button>
+                    <button class="btn btn-danger" onclick = "removeChapter(this)">Remove</button>
+                </li>
+            </ul>
+        </div>
+       
+    </main>
+
+
+    <script>
+        let addBtn = document.getElementById('add_btn')
+        addBtn.addEventListener('click',addChapter)
+        let parentList = document.getElementById('parentList')
+        function addChapter(e){
+            //console.log(parentList.children[0])
+            if(parentList.children[0].className == "list-group-item d-flex justify-content-between emptyMsg"){
+                parentList.children[0].remove()
+                //console.log("here")
+            }
+
+            let currentButton = e.currentTarget;
+            let currentInput = currentButton.previousElementSibling
+            let currentChapterName = currentInput.value;
+
+            let newLi = document.createElement('li')
+            //newLi.classList.add('list-group-item')
+            newLi.className = "list-group-item d-flex justify-content-between"
+            newLi.innerHTML = `<h3 class="flex-grow-1">${currentChapterName}</h3>           
+            <button class="btn btn-warning mx-3" onclick =  "editChapter(this)">Edit</button>
+            <button class="btn btn-danger" onclick="removeChapter(this)">Remove</button>`
+
+            
+            parentList.appendChild(newLi)
+        }
+
+        function removeChapter(currElement){
+            //console.log(currElement.parentElement)
+            currElement.parentElement.remove()
+            if(parentList.children.length==0){
+                let newEmptyMsg = document.createElement("h3")
+                newEmptyMsg.className="list-group-item d-flex justify-content-between"
+
+                newEmptyMsg.classList.add("emptyMsg")
+
+                newEmptyMsg.textContent="Nothing is here. please Add Chapter"
+                parentList.appendChild(newEmptyMsg)
+            }
+        }
+
+        function editChapter(currElement){
+            //console.log(currElement.previousElementSibling)
+            if(currElement.textContent=="Done"){
+                currElement.textContent="Edit"
+                let currentChapterName = currElement.previousElementSibling.value
+
+                let currentHeading = document.createElement("h3")
+                currentHeading.className = "flex-grow-1"
+                currentHeading.textContent=currentChapterName
+                currElement.parentElement.replaceChild(currentHeading,currElement.previousElementSibling)
+
+                console.log(currentHeading)
+            }else{
+                currElement.textContent="Done"
+
+                let currentChapterName = currElement.previousElementSibling.textContent
+    
+                let currInput = document.createElement('input')
+                currInput.type="text";
+                currInput.placeholder = `${currentChapterName}`
+                currInput.className="form-control"
+    
+                currInput.value=currentChapterName
+    
+                currElement.parentElement.replaceChild(currInput,currElement.previousElementSibling)
+            }
+        }
+    </script>
+</body>
+</html>

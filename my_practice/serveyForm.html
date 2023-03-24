@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>survey Form</title>
+    <meta charset="UTF-8" lang="en">
+    <meta viewport="width=device-width initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+    <header>
+    <h1 id="title">freeCodeCamp Survey Form<h1>
+    <p id="description">Thank you for taking the time to help us improve the platform</p>
+    </header>
+      <div id="container">
+      <form id="survey-form">
+        <div id="div1" class="common">
+            <label id="name-label" for="name">Name</label>
+            <input id="name" type="text" name="name" placeholder="Enter your name" required>
+        </div>
+        <div class="common">
+            <label id="email-label" for="email">Email</label>
+            <input  type="email" id="email" required placeholder="abc@gmail.com">
+        </div>
+        <div class="common">
+            <label id="number-label">Number</label>
+            <input id="number" type="number" min="10" max="12" placeholder="123">
+        </div>
+        <div class="common">
+        <label>branch</label>
+        <select id="dropdown">
+            <option>select branch</option>
+            <option>cse</option>
+            <option>bca</option>
+        </select>
+        </div>
+        <div class="common">
+            <label>male</label><input name="radio" type="radio" value="gender">
+            <label>female</label>
+            <input name="radio" type="radio" value="gender">
+        </div>
+        <div class="common">
+            <label>Car</label>
+            <input type="checkbox" value="box1">
+            <label>Bike</label>
+            <input type="checkbox" value="box2">
+            <label>Cycle</label>
+            <input type="checkbox" value="box3">
+        </div>
+        <div class="common">
+            <label for="address">address</label>
+            <textarea name="address" cols="40" rows="1"></textarea>
+        </div>
+        <div id="button" class="common">
+            <input id="submit" type="submit">
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

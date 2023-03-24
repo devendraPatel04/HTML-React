@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Flex</title>
+    <style>
+        *{
+            border-radius: 3%;
+        }
+        .container1{
+            display: flex;
+            width: 100%;
+            box-sizing: border-box;
+            justify-content: space-around;
+            margin-bottom: 1%;
+        }
+        .box{
+            box-sizing: border-box;
+            width: 32.5%;
+            height: 150px;
+            background-color: brown; 
+        }
+        .box1{
+            width:24%;
+            height:100px;
+            background-color:rgb(66, 74, 179);
+        }
+        .box3{
+            width:19%;
+            height:50px;
+            background-color: brown;
+        }
+        .cont1{
+            display: flex;
+            width: 100%;
+            justify-content: space-around;
+            margin-bottom: 1%;
+            
+        }
+        .minbox1{
+            box-sizing: border-box;
+            width: 32.5%;
+            height: 55px;
+            background-color: rgb(90, 20, 53);     
+        }
+        .minbox2{
+            box-sizing: border-box;
+            width: 24%;
+            height: 35px;
+            background-color: rgb(90, 20, 53);
+        }
+        .minbox3{
+            width:19%;
+            height:28px;
+            background-color: rgb(90, 20, 53);
+        }
+        .minbox1:hover{
+            background-color: rgb(220, 253, 142);
+            transition: 1s;
+        }
+    </style>
+</head>
+<body>
+    <div class="container1">
+        <div id="cont" class="box">1
+            <div class="cont1">
+                <div class="minbox1">1</div>
+                <div class="minbox1">2</div>
+                <div class="minbox1">3</div>
+            </div>
+            <div class="cont1">
+                <div class="minbox2">4</div>
+                <div class="minbox2">5</div>
+                <div class="minbox2">6</div>
+                <div class="minbox2">7</div>
+            </div>
+            <div class="cont1">
+                <div class="minbox3">8</div>
+                <div class="minbox3">9</div>
+                <div class="minbox3">10</div>
+                <div class="minbox3">11</div>
+                <div class="minbox3">12</div>
+            </div>
+        </div>
+        <div id="b1" class="box">2</div>
+        <div id="b2" class="box">3</div>
+    </div>
+    <div class="container1">
+        <div class="box1">4</div>
+        <div class="box1">5</div>
+        <div class="box1">6</div>
+        <div class="box1">7</div>
+    </div>
+    <div class="container1">
+        <div class="box3">8</div>
+        <div class="box3">9</div>
+        <div class="box3">10</div>
+        <div class="box3">11</div>
+        <div class="box3">12</div>
+    </div>
+</body>
+</html>

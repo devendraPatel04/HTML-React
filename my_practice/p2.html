@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>table and form</title>
+</head>
+<body>
+    <h1>Learn Table and froms</h1>
+    <div>
+        <h3>learn Tables</h3>
+        <table>
+            <caption>Firends Information</caption>
+            <tr>
+                <th>Name</th>
+                <th>city</th>
+                <th>Phone</th>
+                <th>Email</th>
+            </tr>
+            <tr>
+                <td>dev Patel</td>
+                <td>dhar</td>
+                <td>8827274646</td>
+                <td>dev@gmail.com</td>
+            </tr>
+            <tr>
+                <td>sam khanna</td>
+                <td>indore</td>
+                <td>1234567890</td>
+                <td>sams@yahho.com</td>
+            </tr>
+            <tr>
+                <td>ankit solanki</td>
+                <td>ujjain</td>
+                <td>6543219870</td>
+                <td>ankitsolanki@gmail.com</td>
+            </tr>
+            <tr>
+                <td>Meena Meena</td>
+                <td>Bherunda</td>
+                <td>3692587410</td>
+                <td>meenamee@gamil.com</td>
+            </tr>
+            <tr>
+                <td>raja</td>
+                <td>bhopal</td>
+                <td>4536982170</td>
+                <td>rajraja@yahoo.com</td>
+            </tr>
+        </table>
+    </div>
+    <div>
+        <h2>learn HTML forms</h2>
+        <form action="">
+            <fieldset>
+                <legend>Personal information</legend>
+                <div><label>Enter your name <input type="text" placeholder="eg.: dev" required></label></div>
+                <br>
+                <div><label>Enter your password <input type="password" placeholder="password"></label></div>
+                <br>
+                <div>
+                    <label>Enter your date of birth <input type="date"></label>
+                </div>
+                <br>
+                <div>
+                    <label>Enter your gender 
+                        <label><input type="radio" name="gender" value="Male">Male</label>
+                        <label><input type="radio" name="gender" value="Female">Female</label>
+                        <label><input type="radio" name="gender" value="Other">others</label>
+                    </label>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Contact Information</legend>
+                <div><label>Enter your Email <input type="email" placeholder="eg. xyz@gmail.com"></label></div>
+                <br>
+                <div><label>Enter your phone number <input type="number" placeholder="min 10 numbers"></label></div>
+            </fieldset>
+            <fieldset>
+                <legend>Location details</legend>
+                <div>
+                    <label>Select state
+                        <select name="state">
+                            <option value="None">select</option>
+                            <option value="MP">MP</option>
+                            <option value="UP">UP</option>
+                            <option value="Uk">UK</option>
+                            <option value="Bihar">Bihar</option>
+                        </select>
+                    </label>
+                </div>
+                <br>
+                <div>
+                    <label>Select your preferred city
+                        <label><input type="checkbox" checked >Delhi</label>
+                        <label><input type="checkbox">Mumbai</label>
+                        <label><input type="checkbox">Assam</label>
+                        <label><input type="checkbox">Indore</label>
+                    </label>
+                </div>
+                <br>
+                <label>Enter your Address <textarea id="address" cols="30" rows="10" placeholder="your address" required></textarea></label>
+                
+            </fieldset>
+            <br>
+            <div>
+                <input type="submit">
+                <input type="reset">
+            </div>
+        </form>
+    </div>
+</body>
+</html>

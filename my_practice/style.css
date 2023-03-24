@@ -1,0 +1,51 @@
+header{
+    background-color: brown;
+    border-spacing:2px;
+    padding: 2px;
+    width:80%;
+    margin: auto;
+}
+header h1{
+    text-align: center;
+}
+header p{
+    font-size: 15px;
+}
+#container{
+    border: 2px solid black;
+    width:80%;
+    height:100%;
+    margin: 5px auto;
+    background-color:rgba(65, 248, 65, 0.411);
+}
+#survey-form{
+    margin: auto;
+}
+.common{
+    border: 2px solid black;
+    padding: 1vh;
+    width:80%;
+    margin:2vh auto;
+    background-color: darkgray;
+    /* text-align: center; */
+}
+#submit{
+    width:50%;
+    /* align:center; */
+    /* margin: auto; */
+}
+#submit:hover{
+    width:100%;
+    background-color: gold;
+    cursor: pointer;
+    /* margin: auto 25%; */
+    transition: .2s;
+}
+textarea{
+    margin: auto;
+    top:5px;
+}
+#button{
+    display: flex;
+    justify-content: center;
+}
